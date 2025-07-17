@@ -1,0 +1,29 @@
+---
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import ReviewLayout from '../layouts/ReviewLayout.astro';
+
+const files = fs.readdirSync('./src/content/reviews');
+const posts = files.map((file) => {
+  const content = fs.readFileSync(`./src/content/reviews/${file}`, 'utf-8');
+  const { data, content: body } = matter(content);
+  return { ...data, body };
+});
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>レビュー Casino</title>
+  </head>
+  <body style="font-family: sans-serif; padding: 2rem;">
+    <h1>🎰 日本のカジノレビュー</h1>
+
+    {posts.map(post => (
+      <ReviewLayout {...post}>
+        <p>{post.body}</p>
+      </ReviewLayout>
+    ))}
+  </body>
+</html>
