@@ -2,28 +2,41 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReviewLayout from '../layouts/ReviewLayout.astro';
+import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro';
+import PostList from '../components/PostList.astro';
+import Sidebar from '../components/Sidebar.astro';
 
 const files = fs.readdirSync('./src/content/reviews');
 const posts = files.map((file) => {
   const content = fs.readFileSync(`./src/content/reviews/${file}`, 'utf-8');
   const { data, content: body } = matter(content);
   return { ...data, body };
-});
+}).sort((a, b) => b.rating - a.rating);
+
+const featuredPost = posts[0];
+const recentPosts = posts.slice(1);
 ---
 
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>レビュー Casino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casino Review Japan</title>
   </head>
-  <body style="font-family: sans-serif; padding: 2rem;">
-    <h1>🎰 日本のカジノレビュー</h1>
+  <body class="bg-gray-50 font-sans">
+    <Header />
 
-    {posts.map(post => (
-      <ReviewLayout {...post}>
-        <p>{post.body}</p>
-      </ReviewLayout>
-    ))}
+    <main class="max-w-6xl mx-auto p-4">
+      <Banner post={featuredPost} />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2">
+          <PostList posts={recentPosts} />
+        </div>
+        <div>
+          <Sidebar />
+        </div>
+      </div>
+    </main>
   </body>
 </html>
