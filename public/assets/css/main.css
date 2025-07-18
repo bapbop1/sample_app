@@ -2003,6 +2003,31 @@ input, select, textarea {
 				.favorite_content .grid a:hover {
 					transform: scale(0.95) rotate(-2deg);
 				}
+
+
+				.intro-box {
+					background: #fffaf5;
+					border-left: 6px solid #ff6f00;
+					padding: 1.8em 2em;
+					border-radius: 10px;
+					box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+					font-family: "Noto Sans JP", sans-serif;
+					color: #333;
+					line-height: 1.7;
+				}
+				
+				.intro-box h2 {
+					font-size: 1.6em;
+					color: #e65100;
+					margin-bottom: 1em;
+					font-weight: bold;
+				}
+				
+				.intro-box strong {
+					color: #d84315;
+					font-weight: bold;
+				}
+				
 /* Wrappers */
 
 	#header-wrapper {
