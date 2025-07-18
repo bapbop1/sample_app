@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background: linear-gradient(to right, #111, #222);
 }
 
 ol, ul {
@@ -87,14 +88,6 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-color: #f7f7f7;
-		background-position: top left, top left;
-		background-repeat: repeat-x, repeat;
-		background-size: 100% 30em, auto;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
 		color: #696969;
@@ -1893,10 +1886,43 @@ input, select, textarea {
 					background: #666666;
 				}
 
+				.marquee-banner {
+					overflow: hidden;
+					white-space: nowrap;
+					background: linear-gradient(to right, #111, #222);
+					color: #FFD700;
+					padding: 10px 0;
+					font-weight: bold;
+					font-size: 16px;
+					position: relative;
+				}
+				
+				.marquee-track {
+					display: flex;
+					width: max-content;
+					animation: scroll-left 30s linear infinite;
+				}
+				
+				.marquee-content {
+					display: inline-block;
+					padding-right: 50px; /* Khoảng cách giữa 2 bản sao */
+				}
+				
+				@keyframes scroll-left {
+					0% {
+						transform: translateX(0%);
+					}
+					100% {
+						transform: translateX(-50%);
+					}
+				}
+				
+
 /* Wrappers */
 
 	#header-wrapper {
 		padding: 25px;
+		background: #080e13;
 	}
 
 	#banner-wrapper #banner {
@@ -2081,7 +2107,7 @@ input, select, textarea {
 	#nav {
 		position: absolute;
 		right: 0;
-		top: 20%;
+		top: 25%;
 		font-size: 0.9em;
 	}
 
@@ -2122,7 +2148,7 @@ input, select, textarea {
 					transition: background-color .25s ease-in-out;
 					font-weight: 800;
 					letter-spacing: 0.025em;
-					color: #696969;
+					color: #727272;
 					text-decoration: none;
 					border-radius: 6px;
 					padding: 0.5em 1em 0.5em 1em;
@@ -2133,7 +2159,7 @@ input, select, textarea {
 				}
 
 				#nav ul li a:hover {
-					color: #000000;
+					color: white;
 				}
 
 				#nav ul li a:hover::before {
@@ -2150,7 +2176,7 @@ input, select, textarea {
 				}
 
 				#nav ul li.current a {
-					color: #000000;
+					color: white;
 				}
 
 	.dropotron {
