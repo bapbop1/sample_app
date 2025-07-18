@@ -1,0 +1,15 @@
+---
+const { posts } = Astro.props;
+---
+{posts.map(post => (
+  <li>
+    <a href={post.url} class="ranking-card">
+      <span class="rank">{post.number}</span>
+      <img src={post.image} alt={post.alt}>
+      <div class="casino-info">
+        <div class="casino-title">{post.title}</div>
+        <div class="casino-description">{post.desc}</div>
+      </div>
+    </a>
+  </li>
+))}

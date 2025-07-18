@@ -2027,6 +2027,186 @@ input, select, textarea {
 					color: #d84315;
 					font-weight: bold;
 				}
+
+				.top-ranking-section.container {
+					margin-bottom: 45px;
+				}
+
+				.top-ranking-section, .new-review-section {
+					background: #111;
+					color: #fff;
+					padding: 2rem;
+					margin-top: 2rem;
+					border-radius: 12px;
+					box-shadow: 0 0 10px rgba(255,255,255,0.1);
+				}
+				
+				.top-ranking-section h2,
+				.new-review-section h2 {
+					font-size: 1.8rem;
+					margin-bottom: 1rem;
+					color: #ffd700;
+				}
+				
+				.ranking-list {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
+				
+				.ranking-list li {
+					margin-bottom: 1rem;
+				}
+				
+				.ranking-card {
+					display: flex;
+					align-items: center;
+					background: #222;
+					border-radius: 10px;
+					padding: 12px;
+					text-decoration: none;
+					color: inherit;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+					position: relative;
+					overflow: hidden;
+				}
+				
+				.ranking-card:hover {
+					transform: scale(1.01);
+					box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+					background: linear-gradient(145deg, #222, #333);
+				}
+				
+				.ranking-card img {
+					width: 150px;
+					height: 150px;
+					object-fit: cover;
+					margin-right: 1rem;
+					border-radius: 8px;
+					transition: transform 0.3s ease;
+				}
+				
+				.rank {
+					width: 48px;
+					height: 48px;
+					font-size: 1.6rem;
+					font-weight: bold;
+					color: #000;
+					background-color: #ffd700;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-right: 1rem;
+					box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+				}
+
+				.ranking-list .casino-info .casino-title {
+					color: #e65100;
+				}
+
+				.ranking-list .casino-info .casino-description {
+					font-size: 12px;
+				}
+				
+				.casino-info a {
+					color: #00ffff;
+					text-decoration: underline;
+				}
+				
+				.review-cards {
+					display: flex;
+					gap: 1rem;
+					flex-wrap: wrap;
+				}
+				
+				.review-card {
+					background: #222;
+					border-radius: 10px;
+					padding: 1rem;
+					flex: 1 1 45%;
+					min-width: 250px;
+				}
+				
+				.review-card img {
+					width: 100%;
+					height: 140px;
+					object-fit: cover;
+					border-radius: 6px;
+				}
+				
+				.review-card h3 {
+					font-size: 1.2rem;
+					color: #ffa500;
+				}
+				
+				.review-card p {
+					font-size: 0.9rem;
+					color: #ccc;
+				}
+				
+				.review-card a {
+					display: inline-block;
+					margin-top: 0.5rem;
+					color: #00ffcc;
+					text-decoration: none;
+				}
+				.user-review-section {
+					background: #fff6ec;
+					padding: 2rem;
+					border-radius: 12px;
+					margin-top: 2rem;
+					box-shadow: 0 8px 8px rgba(0,0,0,0.05);
+				}
+				
+				.user-review-section h2 {
+					font-size: 1.8rem;
+					color: #222;
+					margin-bottom: 1.5rem;
+					border-left: 5px solid #ff9900;
+					padding-left: 10px;
+				}
+				
+				.user-review-cards {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 1.5rem;
+				}
+				
+				.user-review-card {
+					background: #fff;
+					border: 1px solid #eee;
+					border-radius: 10px;
+					display: flex;
+					padding: 1rem;
+					flex: 1 1 30%;
+					box-shadow: 0 0 8px rgba(0,0,0,0.03);
+					align-items: flex-start;
+				}
+				
+				.user-icon {
+					font-size: 2.2rem;
+					margin-right: 1rem;
+					color: #ff6600;
+				}
+				
+				.review-body h3 {
+					font-size: 1.1rem;
+					color: #d9534f;
+					margin-bottom: 0.5rem;
+				}
+				
+				.review-body p {
+					font-size: 0.95rem;
+					color: #333;
+					margin-bottom: 0.5rem;
+				}
+				
+				.review-author {
+					display: block;
+					font-size: 0.85rem;
+					color: #777;
+				}
 				
 /* Wrappers */
 
@@ -2131,13 +2311,18 @@ input, select, textarea {
     }
 
 	#features-wrapper {
-		padding: 3em 0 3em 0;
+		padding: 3em 0 1em 0;
 	}
 
 	#main-wrapper {
 		background: #fff;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
-		padding: 5em 0 5em 0;
+		padding: 5em 0 1em 0;
+	}
+
+	#review-wrapper {
+		padding: 2em 0;
+		background-color: white;
 	}
 
 /* Header */
