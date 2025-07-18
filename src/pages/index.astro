@@ -3,10 +3,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import PostListTop from '../components/PostListTop.astro';
+import PostListFavorite from '../components/PostListFavorite.astro';
 
 import { getPostsByCategory } from '../utils/getPostsByCategory';
 
 const topPosts = getPostsByCategory('top');
+const favoritePosts = getPostsByCategory('favorite');
 ---
 
 <!DOCTYPE HTML>
@@ -118,19 +120,15 @@ const topPosts = getPostsByCategory('top');
 					<div class="container">
 						<div class="row gtr-200">
 							<div class="col-4 col-12-medium">
-
 									<div id="sidebar">
-										<section class="widget thumbnails">
-											<h3>Interesting stuff</h3>
+										<section class="widget thumbnails favorite_content">
+											<h3 class="shining-title">あなたにピッタリのカジノ、見つけました！</h3>
 											<div class="grid">
 												<div class="row gtr-50">
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
+													<PostListFavorite posts={favoritePosts} />
 												</div>
 											</div>
-											<a href="#" class="button icon fa-file-alt">More</a>
+											<a href="#" class="cta-button-more">▶ もっと見る</a>
 										</section>
 									</div>
 
