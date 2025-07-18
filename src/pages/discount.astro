@@ -1,0 +1,255 @@
+---
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<section class="casino-list-section">
+  <h2 class="section-title">🎁 最新のカジノプロモーション一覧</h2>
+  <ul class="casino-list">
+    <li class="casino-item">
+      <a href="https://mctag.co/s/yq_3_A-xoXE">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/yq_3_A-xoXE" alt="ライブカジノハウス">
+          <span class="label-hot">HOT🔥</span>
+        </div>
+        <div class="casino-info">
+          <h3>🏆 Casino Royal</h3>
+          <p>新規登録で最大100回スピン無料！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/JlPC7nlRJqQ">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/JlPC7nlRJqQ" alt="旅カジ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/LdulTWPmlo0">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/LdulTWPmlo0" alt="ミスティーノ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/I6soT-gFakM">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/I6soT-gFakM" alt="">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/-o8L45oc6YA">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/-o8L45oc6YA" alt="7spin（スロットゲームリベート）">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/xvSOAjlPmaM">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/xvSOAjlPmaM" alt="テッドベット">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/7vDN-J8t2-A">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/7vDN-J8t2-A" alt="ジョイカジノ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/sBplOJBPxxk">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/sBplOJBPxxk" alt="クイーンカジノ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/6EPFnv5N6TU">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/6EPFnv5N6TU" alt="ボンズカジノ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/gIjq-XVaHNg">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/gIjq-XVaHNg" alt="トラストダイス">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/eckihS4ldfs">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/eckihS4ldfs" alt="ビットカジノ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/0_c16HUyIVU">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/0_c16HUyIVU" alt="コンクエスタドール">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/H23QBJtIMBM">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/H23QBJtIMBM" alt="BC.Game 750%ボーナス">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/KdfTw3eSxRg">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/KdfTw3eSxRg" alt="20bet">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/_W0dWakf0aE">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/_W0dWakf0aE" alt="20bet">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/pObNdjoFK74">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/pObNdjoFK74" alt="スポーツべットアイ・オー">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/VwAF0R9y_Ag">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/VwAF0R9y_Ag" alt="壱カジ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/YRVJG1kD9UI">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/YRVJG1kD9UI" alt="プレイワールド">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/_mVik3m4HlQ">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/_mVik3m4HlQ" alt="カジノスカイ">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+    <li class="casino-item">
+      <a href="https://mctag.co/s/6O56D_M8CT4">
+        <div class="casino-img-wrapper">
+          <img src="https://mctag.co/banner/6O56D_M8CT4" alt="ボンバスティック">
+          <span class="label-new">NEW✨</span>
+        </div>
+        <div class="casino-info">
+          <h3>🎰 Lucky Vegas</h3>
+          <p>登録だけでボーナス5,000円ゲット！</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+</BaseLayout>

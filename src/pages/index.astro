@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import PostListTop from '../components/PostListTop.astro';
 import PostListFavorite from '../components/PostListFavorite.astro';
 import PostListRankingWeek from '../components/PostListRankingWeek.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 import { getPostsByCategory } from '../utils/getPostsByCategory';
 
@@ -13,200 +14,108 @@ const favoritePosts = getPostsByCategory('favorite');
 const rankingWeekPosts = getPostsByCategory('ranking_week');
 ---
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="index, follow">
-	<title>【2025年最新】おすすめオンラインカジノランキング - 安全＆高還元率</title>
-	<meta name="description" content="2025年最新版！信頼できるオンラインカジノを厳選レビュー。入金不要ボーナス、出金スピード、サポート体制を徹底比較。初心者にもおすすめ！">
-	<link rel="canonical" href="https://sample-app-one-xi.vercel.app/" />
-
-	<!-- Open Graph for social sharing -->
-	<meta property="og:title" content="【2025年版】オンラインカジノレビュー - 信頼性・ボーナス徹底比較">
-	<meta property="og:description" content="今すぐチェック！日本人向けの安全なオンラインカジノを紹介。高還元率・入金不要ボーナス・即時出金。">
-	<meta property="og:url" content="https://sample-app-one-xi.vercel.app/">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://sample-app-one-xi.vercel.app/og-image.jpg">
-
-	<!-- Favicon -->
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/assets/css/main.css?v=9" />
-
-	<!-- Scripts -->
-	<script src="/assets/js/jquery.min.js" is:inline></script>
-	<script src="/assets/js/jquery.dropotron.min.js" is:inline></script>
-	<script src="/assets/js/browser.min.js" is:inline></script>
-	<script src="/assets/js/breakpoints.min.js" is:inline></script>
-	<script src="/assets/js/util.js" is:inline></script>
-	<script src="/assets/js/main.js" is:inline></script>
-</head>
-<body class="is-preload homepage">
-	<div id="page-wrapper">
-
-		<div id="header-wrapper">
-			<header id="header" class="container">
-
-				<!-- Logo -->
-				<div id="logo">
-					<a href="/" class="image featured"><img src="images/logo-casino.jpg" alt="" /></a>
-				</div>
-
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="gold" class="menu-icon" xmlns="http://www.w3.org/2000/svg" style="margin-top: -25px; vertical-align: super;">
-							<path d="M5 16L3 7l5 4 4-7 4 7 5-4-2 9H5zm-2 2h18v2H3v-2z"></path>
-						</svg>トップカジノ</a></li>
-						<li><a href="#">ボーナス・プロモーション</a></li>
-						<li><a href="#">カジノレビュー</a></li>
-						<li><a href="#">ニュース</a></li>
-						<li><a href="#">よくある質問</a></li>
-						<li><a href="#">お問い合わせ</a></li>
-					</ul>
-				</nav>
-
-			</header>
-		</div>
-
-		<div class="marquee-banner">
-			<div class="marquee-track">
-				<div class="marquee-content">
-					<span class="c1">🎰 今すぐプレイして、最大100万円のボーナスをゲット！</span>
-					<span class="c2">💎 新規登録で50回の無料スピン！</span>
-					<span class="c3">👑 日本人に人気No.1のオンラインカジノ！</span>
-					<span class="c4">🃏 本物のディーラーとライブカジノ体験！</span>
-					<span class="c5">🎲 スマホでいつでもどこでもプレイ可能！</span>
-				</div>
-				<!-- Bản sao để tạo hiệu ứng nối đuôi -->
-				<div class="marquee-content">
-					<span class="c1">🎰 今すぐプレイして、最大100万円のボーナスをゲット！</span>
-					<span class="c2">💎 新規登録で50回の無料スピン！</span>
-					<span class="c3">👑 日本人に人気No.1のオンラインカジノ！</span>
-					<span class="c4">🃏 本物のディーラーとライブカジノ体験！</span>
-					<span class="c5">🎲 スマホでいつでもどこでもプレイ可能！</span>
-				</div>
+<BaseLayout>
+	<div id="banner-wrapper">
+		<div id="banner" class="box container">
+			<div class="text-wrapper">
+				<h1>
+					<span class="icon">🎰</span>
+					<span class="gradient-text">今夜の運試しに挑戦しよう！</span>
+					<span class="icon1">🎲</span>
+				</h1>
+				<p>最高のカジノレビューと最新のボーナス情報はこちら</p>
+				<button class="cta-button">トップカジノ</button>
 			</div>
 		</div>
-
-		<div id="banner-wrapper">
-			<div id="banner" class="box container">
-				<div class="text-wrapper">
-					<h1>
-						<span class="icon">🎰</span>
-						<span class="gradient-text">今夜の運試しに挑戦しよう！</span>
-						<span class="icon1">🎲</span>
-					</h1>
-					<p>最高のカジノレビューと最新のボーナス情報はこちら</p>
-					<button class="cta-button">トップカジノ</button>
-				</div>
-			</div>
-		</div>
-
-		<div id="features-wrapper">
-			<div class="container">
-				<div class="row top_casino_home">
-					<PostListTop posts={topPosts} />
-				</div>
-			</div>
-		</div>
-
-		<div id="top-week">
-			<section class="top-ranking-section container">
-				<h2>🏆 今週のトップカジノランキング</h2>
-				<ul class="ranking-list">
-					<PostListRankingWeek posts={rankingWeekPosts} />
-				</ul>
-			</section>
-		</div>
-
-		<div id="main-wrapper">
-			<div class="container">
-				<div class="row gtr-200">
-					<div class="col-4 col-12-medium">
-						<div id="sidebar">
-							<section class="widget thumbnails favorite_content">
-								<h3 class="shining-title">あなたにピッタリのカジノ、見つけました！</h3>
-								<div class="grid">
-									<div class="row gtr-50">
-										<PostListFavorite posts={favoritePosts} />
-									</div>
-								</div>
-								<a href="#" class="cta-button-more">▶ もっと見る</a>
-							</section>
-						</div>
-					</div>
-					<div class="col-8 col-12-medium imp-medium">
-						<div id="content">
-							<div class="intro-box">
-								<h2>あなたにピッタリのオンラインカジノをご紹介！</h2>
-								<p>
-									数あるオンラインカジノの中から、<strong>日本人プレイヤーに人気</strong>で、<strong>信頼性・ボーナス・使いやすさ</strong>を兼ね備えたカジノだけを厳選してご紹介します。
-								</p>
-								<p>
-									💰 <strong>最大77,777円のウェルカムボーナス</strong><br>
-									🎰 <strong>最新スロット・ライブカジノを完全網羅</strong><br>
-									🔒 <strong>安心の日本語サポート＆高速出金</strong>
-								</p>
-								<p>
-									はじめてでも安心！初心者向けガイドや、実際に遊んだレビューも掲載中。<br>
-									今すぐチェックして、<strong>お得にカジノデビュー</strong>しよう！
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="review-wrapper">
-			<section class="user-review-section no-avatar container">
-				<h2>📝 プレイヤーのリアルレビュー</h2>
-				<div class="user-review-cards">
-					<div class="user-review-card">
-						<div class="user-icon">🎰</div>
-						<div class="review-body">
-							<h3>「クイーンカジノ」は初心者にも優しい！</h3>
-							<p>最初は少し不安でしたが、日本語サポートがとても丁寧で安心できました！$138のウェルカムボーナスもすぐに受け取れて、スロットで小さな勝ちも🎰 今では週に2〜3回遊んでます！</p>
-							<span class="review-author">– プレイヤーA（30代・東京）</span>
-						</div>
-					</div>
-
-					<div class="user-review-card">
-						<div class="user-icon">🃏</div>
-						<div class="review-body">
-							<h3>ライブカジノが本格的で驚いた！</h3>
-							<p>スマホでも動作がサクサクで、ディーラーさんもフレンドリー。ブラックジャックで緊張感のあるプレイが楽しめました。USDTのキャッシュバックも嬉しい💰</p>
-							<span class="review-author">– プレイヤーB（20代・大阪）</span>
-						</div>
-					</div>
-
-					<div class="user-review-card">
-						<div class="user-icon">💵</div>
-						<div class="review-body">
-							<h3>高額出金もスムーズで安心！</h3>
-							<p>初めて10万円以上出金しましたが、本人確認もスムーズで翌日に着金✨ 信頼できるカジノだと思います。今はVIPランクも狙ってます🔥</p>
-							<span class="review-author">– プレイヤーC（40代・福岡）</span>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<div id="footer-wrapper">
-			<footer id="footer" class="container">
-				<div class="row">
-					<div class="col-12">
-						<div id="copyright">
-							<ul class="menu">
-								<li>© Copyright 2025 All Rights Reserved.</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
-
 	</div>
-</body>
-</html>
+
+	<div id="features-wrapper">
+		<div class="container">
+			<div class="row top_casino_home">
+				<PostListTop posts={topPosts} />
+			</div>
+		</div>
+	</div>
+
+	<div id="top-week">
+		<section class="top-ranking-section container">
+			<h2>🏆 今週のトップカジノランキング</h2>
+			<ul class="ranking-list">
+				<PostListRankingWeek posts={rankingWeekPosts} />
+			</ul>
+		</section>
+	</div>
+
+	<div id="main-wrapper">
+		<div class="container">
+			<div class="row gtr-200">
+				<div class="col-4 col-12-medium">
+					<div id="sidebar">
+						<section class="widget thumbnails favorite_content">
+							<h3 class="shining-title">あなたにピッタリのカジノ、見つけました！</h3>
+							<div class="grid">
+								<div class="row gtr-50">
+									<PostListFavorite posts={favoritePosts} />
+								</div>
+							</div>
+							<a href="#" class="cta-button-more">▶ もっと見る</a>
+						</section>
+					</div>
+				</div>
+				<div class="col-8 col-12-medium imp-medium">
+					<div id="content">
+						<div class="intro-box">
+							<h2>あなたにピッタリのオンラインカジノをご紹介！</h2>
+							<p>
+								数あるオンラインカジノの中から、<strong>日本人プレイヤーに人気</strong>で、<strong>信頼性・ボーナス・使いやすさ</strong>を兼ね備えたカジノだけを厳選してご紹介します。
+							</p>
+							<p>
+								💰 <strong>最大77,777円のウェルカムボーナス</strong><br>
+								🎰 <strong>最新スロット・ライブカジノを完全網羅</strong><br>
+								🔒 <strong>安心の日本語サポート＆高速出金</strong>
+							</p>
+							<p>
+								はじめてでも安心！初心者向けガイドや、実際に遊んだレビューも掲載中。<br>
+								今すぐチェックして、<strong>お得にカジノデビュー</strong>しよう！
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="review-wrapper">
+		<section class="user-review-section no-avatar container">
+			<h2>📝 プレイヤーのリアルレビュー</h2>
+			<div class="user-review-cards">
+				<div class="user-review-card">
+					<div class="user-icon">🎰</div>
+					<div class="review-body">
+						<h3>「クイーンカジノ」は初心者にも優しい！</h3>
+						<p>最初は少し不安でしたが、日本語サポートがとても丁寧で安心できました！$138のウェルカムボーナスもすぐに受け取れて、スロットで小さな勝ちも🎰 今では週に2〜3回遊んでます！</p>
+						<span class="review-author">– プレイヤーA（30代・東京）</span>
+					</div>
+				</div>
+
+				<div class="user-review-card">
+					<div class="user-icon">🃏</div>
+					<div class="review-body">
+						<h3>ライブカジノが本格的で驚いた！</h3>
+						<p>スマホでも動作がサクサクで、ディーラーさんもフレンドリー。ブラックジャックで緊張感のあるプレイが楽しめました。USDTのキャッシュバックも嬉しい💰</p>
+						<span class="review-author">– プレイヤーB（20代・大阪）</span>
+					</div>
+				</div>
+
+				<div class="user-review-card">
+					<div class="user-icon">💵</div>
+					<div class="review-body">
+						<h3>高額出金もスムーズで安心！</h3>
+						<p>初めて10万円以上出金しましたが、本人確認もスムーズで翌日に着金✨ 信頼できるカジノだと思います。今はVIPランクも狙ってます🔥</p>
+						<span class="review-author">– プレイヤーC（40代・福岡）</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</BaseLayout>

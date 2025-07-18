@@ -1,0 +1,47 @@
+---
+const { currentPath } = Astro.props;
+---
+
+<div id="header-wrapper">
+  <header id="header" class="container">
+
+    <!-- Logo -->
+    <div id="logo">
+      <a href="/" class="image featured"><img src="images/logo-casino.jpg" alt="" /></a>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li class={currentPath === "/" ? "current" : ""}><a href="/"><svg width="20" height="20" viewBox="0 0 24 24" fill="gold" class="menu-icon" xmlns="http://www.w3.org/2000/svg" style="margin-top: -25px; vertical-align: super;">
+          <path d="M5 16L3 7l5 4 4-7 4 7 5-4-2 9H5zm-2 2h18v2H3v-2z"></path>
+        </svg>トップカジノ</a></li>
+        <li class={currentPath.startsWith("/discount") ? "current" : ""}><a href="/discount">ボーナス・プロモーション</a></li>
+        <li><a href="#">カジノレビュー</a></li>
+        <li><a href="#">ニュース</a></li>
+        <li><a href="#">よくある質問</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+  </header>
+</div>
+
+<div class="marquee-banner">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span class="c1">🎰 今すぐプレイして、最大100万円のボーナスをゲット！</span>
+      <span class="c2">💎 新規登録で50回の無料スピン！</span>
+      <span class="c3">👑 日本人に人気No.1のオンラインカジノ！</span>
+      <span class="c4">🃏 本物のディーラーとライブカジノ体験！</span>
+      <span class="c5">🎲 スマホでいつでもどこでもプレイ可能！</span>
+    </div>
+    <!-- Bản sao để tạo hiệu ứng nối đuôi -->
+    <div class="marquee-content">
+      <span class="c1">🎰 今すぐプレイして、最大100万円のボーナスをゲット！</span>
+      <span class="c2">💎 新規登録で50回の無料スピン！</span>
+      <span class="c3">👑 日本人に人気No.1のオンラインカジノ！</span>
+      <span class="c4">🃏 本物のディーラーとライブカジノ体験！</span>
+      <span class="c5">🎲 スマホでいつでもどこでもプレイ可能！</span>
+    </div>
+  </div>
+</div>
