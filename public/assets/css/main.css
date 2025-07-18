@@ -2145,6 +2145,56 @@ input, select, textarea {
 					object-fit: contain;
 					background: #00000040;
 				}
+
+				.join-button {
+					display: inline-block;
+					margin-top: 1rem;
+					padding: 0.6rem 1.2rem;
+					font-weight: bold;
+					border: none;
+					border-radius: 30px;
+					text-decoration: none;
+					font-size: 1rem;
+					box-shadow: 0 4px 12px rgba(250, 204, 21, 0.4);
+					transition: transform 0.2s ease, box-shadow 0.3s ease;
+					position: relative;
+					overflow: hidden;
+					text-align: center;
+				}
+				
+				.join-button::before {
+					content: "✨";
+					position: absolute;
+					left: -20px;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: 1.2rem;
+					animation: sparkleMove 2s linear infinite;
+					opacity: 0.7;
+				}
+				
+				@keyframes sparkleMove {
+					0% {
+						left: -20px;
+						opacity: 0;
+					}
+					50% {
+						left: 50%;
+						opacity: 1;
+					}
+					100% {
+						left: 120%;
+						opacity: 0;
+					}
+				}
+				
+				.casino-item:hover .join-button {
+					transform: scale(1.05);
+					box-shadow: 0 6px 18px rgba(250, 204, 21, 0.6);
+					background: linear-gradient(135deg, #fde047, #facc15);
+					color: #000;
+				}
+				
 				
 				.casino-item:hover .casino-img-wrapper img {
 					transform: scale(1.1);
@@ -2220,11 +2270,6 @@ input, select, textarea {
 
 				.ranking-list .casino-info .casino-description {
 					font-size: 12px;
-				}
-				
-				.casino-info a {
-					color: #00ffff;
-					text-decoration: underline;
 				}
 				
 				.review-cards {
