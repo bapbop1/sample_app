@@ -2092,8 +2092,27 @@ input, select, textarea {
 
 			#nav ul li {
 				float: left;
-				line-height: 4.5em;
 				padding-left: 1.5em;
+				position: relative;
+			}
+
+			#nav ul li a {
+				position: relative;
+				display: inline-block;
+				color: white;
+				padding: 0 15px !important;
+				overflow: hidden;
+			}
+
+			#nav ul li a:before {
+				content: '';
+				position: absolute;
+				top: 25%;
+				left: -75%;
+				width: 50%;
+				height: 200%;
+				background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+				transform: rotate(25deg);
 			}
 
 				#nav ul li a, #nav ul li span {
@@ -2113,17 +2132,25 @@ input, select, textarea {
 					display: none;
 				}
 
-				#nav ul li:hover a, #nav ul li:hover span {
-					background: #fff;
+				#nav ul li a:hover {
+					color: #000000;
 				}
 
-				#nav ul li.active a, #nav ul li.active span {
-					background: #fff;
+				#nav ul li a:hover::before {
+					animation: shine 0.75s ease-in-out;
+				}
+
+				#nav ul li.current a:hover::before {
+					animation: none;
+				}
+				
+				@keyframes shine {
+					0% { left: -75%; }
+					100% { left: 125%; }
 				}
 
 				#nav ul li.current a {
-					background: #444;
-					color: #fff;
+					color: #000000;
 				}
 
 	.dropotron {
