@@ -1,5 +1,5 @@
 ---
-title: "💎 毎日もらえる！USDT 2.0%還元キャンペーン開催中✨"
+title: "🎰 毎日もらえる！USDT 2.0%還元キャンペーン開催中✨"
 image: "https://mctag.co/banner/L1TOXgN42GY"
 url: "https://mctag.co/s/L1TOXgN42GY"
 alt: ""

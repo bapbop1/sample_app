@@ -1,10 +1,9 @@
 ---
-title: "💎【特別限定】今すぐGET！入金不要で¥6000ボーナス！"
+title: "🎁【話題沸騰】最大$5,000ボーナスが今すぐもらえる！"
 image: "https://mctag.co/banner/GhA-Rp9xNBQ"
 url: "https://mctag.co/s/GhA-Rp9xNBQ"
 alt: "Winz.io"
-sub_title: "✨登録だけで即プレイ可能！リスクゼロで体験スタート！"
-desc: "📝<strong>入金不要で6000円分のボーナス</strong>が今だけもらえる！<br>可愛いキャラと一緒に、楽しいスロット体験を今すぐ始めよう！</br></br>
-
+sub_title: "🪙 KYC不要・賭け条件なしの次世代オンラインカジノ！"
+desc: "📝仮想通貨で楽しめる【Winz.io】が超アツい！</br> 今なら初回登録で最大 <strong>$5,000</strong>のウェルカムボーナス をゲット！ </br>最大<strong>30%</strong>のレーク・キャッシュバック も毎週還元！</br> KYC不要で即プレイ！</br>ボーナスに賭け条件なしだから、勝った分はそのまま出金OK！</br></br>
 👉【<a href='https://mctag.co/s/GhA-Rp9xNBQ'>今すぐ参加</a>】"
 ---
