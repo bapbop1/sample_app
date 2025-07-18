@@ -1907,9 +1907,9 @@ input, select, textarea {
 					overflow: hidden;
 					white-space: nowrap;
 					background: linear-gradient(to right, #111, #222);
-					padding: 10px 0;
+					padding: 5px 0;
 					font-weight: bold;
-					font-size: 16px;
+					font-size: 14px;
 					position: relative;
 				}
 				
@@ -1940,7 +1940,7 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 25px;
+		padding-top: 10px;
 		background: #080e13;
 	}
 
