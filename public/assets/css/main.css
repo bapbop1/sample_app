@@ -1771,9 +1771,18 @@ input, select, textarea {
 			height: 100%;
 		}
 
-					.top_casino_home .box.feature .inner header h2 {
+			.top_casino_home .box.feature .inner header h2 {
 				font-size: 15px !important;
 				line-height: 20px;
+			}
+
+			.top_casino_home .box.feature a.featured{
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.top_casino_home .box.feature a.featured:hover {
+				transform: scale(0.95);
+  			box-shadow: 0 0 15px #ffd700, 0 0 25px #ffa500;
 			}
 
 			.box.feature .inner {
