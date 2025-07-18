@@ -1890,7 +1890,6 @@ input, select, textarea {
 					overflow: hidden;
 					white-space: nowrap;
 					background: linear-gradient(to right, #111, #222);
-					color: #FFD700;
 					padding: 10px 0;
 					font-weight: bold;
 					font-size: 16px;
@@ -1905,17 +1904,20 @@ input, select, textarea {
 				
 				.marquee-content {
 					display: inline-block;
-					padding-right: 50px; /* Khoảng cách giữa 2 bản sao */
+					padding-right: 50px;
 				}
 				
 				@keyframes scroll-left {
-					0% {
-						transform: translateX(0%);
-					}
-					100% {
-						transform: translateX(-50%);
-					}
+					0% { transform: translateX(0%); }
+					100% { transform: translateX(-50%); }
 				}
+				
+				/* Màu từng câu */
+				.c1 { color: #FFD700; } /* vàng kim */
+				.c2 { color: #00FFFF; } /* cyan */
+				.c3 { color: #FF69B4; } /* hồng đậm */
+				.c4 { color: #7FFF00; } /* xanh chanh */
+				.c5 { color: #FFA500; } /* cam rực */
 				
 
 /* Wrappers */
