@@ -1451,7 +1451,7 @@ input, select, textarea {
 	}
 
 	header {
-		margin: 0 0 2em 0;
+		margin: 0 0 15px 0;
 	}
 
 		header h2, header h3 {
@@ -1768,7 +1768,13 @@ input, select, textarea {
 
 		.box.feature {
 			padding: 0;
+			height: 100%;
 		}
+
+					.top_casino_home .box.feature .inner header h2 {
+				font-size: 15px !important;
+				line-height: 20px;
+			}
 
 			.box.feature .inner {
 				padding: 4em 2em 3em 2em;
@@ -1780,6 +1786,8 @@ input, select, textarea {
 
 			.box.feature p {
 				margin: 0;
+				font-size: 12px;
+				line-height: 20px;
 			}
 
 			.box.feature .image {
@@ -1930,7 +1938,6 @@ input, select, textarea {
 	#banner-wrapper #banner {
 		background-image: url('/images/banner_top.jpg');
     height: 360px;
-    background-repeat: no-repeat;
 		background-size: 100%;
 		align-items: center;
 		justify-content: center;
@@ -2031,10 +2038,6 @@ input, select, textarea {
 		background: #fff;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 5em 0 5em 0;
-	}
-
-	#footer-wrapper {
-		padding: 6em 0 8em 0;
 	}
 
 /* Header */
@@ -2292,7 +2295,7 @@ input, select, textarea {
 
 	#copyright {
 		color: #aaa;
-		padding: 4em 0 0 0;
+		padding: 2em 0 0 0;
 		text-align: center;
 	}
 
